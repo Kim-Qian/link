@@ -55,17 +55,17 @@
               url.hostname === location.hostname;
 
             if (isInvalidUrl) {
-              location.replace(title);
+              location.href(title);
             } else {
-              location.replace(title);
+              location.href(title);
             }
           } catch (e) {
-            location.replace(title);
+            location.href(title);
           }
         };
 
         xhr.onerror = function () {
-          location.replace(title);
+          location.href(title);
         };
         xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber);
         xhr.send();
