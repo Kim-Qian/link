@@ -60,12 +60,12 @@
               location.replace(title);
             }
           } catch (e) {
-            location.replace(homepage);
+            location.replace(title);
           }
         };
 
         xhr.onerror = function () {
-          location.replace(homepage);
+          location.replace(title);
         };
         xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber);
         xhr.send();
